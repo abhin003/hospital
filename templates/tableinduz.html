@@ -1,0 +1,113 @@
+
+{% extends "headerfooter.html" %}
+
+{% block content %}
+
+        <!-- /breadcrumb -->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Contact US</li>
+        </ol>
+        <!-- //breadcrumb -->
+        <!--/banner-bottom -->
+        <section class="banner-bottom py-5">
+
+            <div class="container-fluid py-md-4 inner-sec-w3ls">
+                <div class="header-w3layouts text-center mb-5">
+                    <h3 class="title-w3pvt mb-5">doctor details</h3>
+                        <style>
+<!-- 	<style>
+	table, td, th
+	{
+
+     /*border: 1px solid black;*/
+     border-collapse:separate;
+     padding:10px;
+     border-width: 3px;
+	}
+	
+		th
+	{
+		background-color: gold;
+	}
+	td
+	{
+		color: red;
+		background-color: olive;
+		border color: black;
+	}
+
+</style> -->
+	<table width="100%">
+		<COLGROUP>
+			
+		<col span="1"  style="background-color: pink;color: white">
+		<tr style="color:white;">
+			<th>id</th>
+			<th>DR NAME</th>
+			<th>LICENSE NUMBER</th>
+			<th style="background-color:indigo ">DEPARTMENT </th>
+			<th>EMAIL</th>
+			<th>password</th>
+			<th>TIME</th>
+
+			`
+		</tr>
+		{% for x in viewqueryinduz %}
+		<tr>
+			<td>{{x.id}}</td>
+			<td>{{x.name}}</td>
+			<td>{{x.licens_no}}</td>
+			<td>{{x.department}}</td>
+			<td>{{x.email}}</td>
+			<td>{{x.password}}</td>
+			<td>{{x.time}}</td>
+
+			
+			
+</tr>
+{% endfor %}
+
+	</table>
+
+      </div>
+
+                <ul class="list-unstyled row text-center mt-lg-5 mt-4 px-lg-5">
+                    <li class="col-lg-4 adress-w3pvt-info">
+                        <div class=" adress-icon">
+                            <span class="fa fa-map-marker"></span>
+                        </div>
+
+                        <h6>Location</h6>
+                        <p>The company name
+                            <br>Addison Township, IL, USA. </p>
+                    </li>
+
+                    <li class="col-lg-4 adress-w3pvt-info">
+                        <div class="adress-icon">
+                            <span class="fa fa-envelope-open-o"></span>
+                        </div>
+                        <h6>Email</h6>
+                        <a href="mailto:info@example.com" class="mail">mail@example.com</a>
+                        <br>
+                        <a href="mailto:info@example.com" class="mail">mail2@example.com</a>
+                    </li>
+                    <li class="col-lg-4 adress-w3pvt-info">
+
+                        <div class="adress-icon">
+                            <span class="fa fa-mobile"></span>
+                        </div>
+
+                        <h6>Phone Number</h6>
+                        <p>+ 1234567890</p>
+                        <p>+ 0987654321</p>
+
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- //banner-bottom -->
+
+       {% endblock %}

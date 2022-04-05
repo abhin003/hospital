@@ -1,0 +1,76 @@
+   <!DOCTYPE html>
+   <html>
+   <head>
+        <!-- Custom-Files -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/static/css/slider.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="/static/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts --> 
+       <title></title>
+   </head>
+   <script type="text/javascript">
+     function checkpass()
+     {
+      alert("confirm")
+      var passid = document.getElementById('cnpass').value;
+      var newpassid = document.getElementById('nwpass').value;
+      alert(passid);
+      alert(newpassid);
+        if(passid==newpassid)
+        {
+            alert('sucess')
+          // document.getElementById("sub").disabled = false;
+
+          document.getElementById("sub").disabled = false;
+
+
+        }
+        else
+        {
+
+          document.getElementById("sub").disabled = true;
+        }
+
+      }
+     
+   </script>
+   <body>
+         <section class="last-content">
+            <div class="overlay-last">
+                <div class="container text-center">
+                    <div class="last-w3pvt-inner-content row">
+
+                        <div class="col-md-6 offset-md-6">
+                        
+                            <form action="/patpass/" class="booking"  id="idi" method="POST">
+                                {% csrf_token %}
+                                <h3 class="mb-4">forget password?..</h3>
+                                <h4>{{error}}</h4>
+                                <h4>{{msg}}</h4>
+                                <h4>{{mssg}}</h4>
+                                <div class="form-group">
+                                   
+                                    <input placeholder=" new password" id="nwpass" type="password" name="pass1" required="">
+                       <input placeholder="confirm password" type="password" id="cnpass"name="pass2" required="" onchange="checkpass()"> 
+                       <input type="hidden" name="uid" value="{{uid}}">            
+                       
+                                    <button  id="sub" class="book-appo btn mt-3" >SUBMIT </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+   
+   </body>
+   </html>   <!-- //Meta tag Keywords -->
+    

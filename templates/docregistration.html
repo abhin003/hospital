@@ -1,0 +1,50 @@
+   <!DOCTYPE html>
+   <html>
+   <head>
+        <!-- Custom-Files -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/static/css/slider.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="/static/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts --> 
+       <title></title>
+   </head>
+   <body>
+         <section class="last-content">
+            <div class="overlay-last">
+                <div class="container text-center">
+                    <div class="last-w3pvt-inner-content row">
+
+                        <div class="col-md-6 offset-md-6">
+                        
+                            <form action="/docreg/" class="booking" method="post">
+                                {% csrf_token %}
+                                <h3 class="mb-4">DOCTORS REGESTRATION</h3>
+                                 <h2  style="color: red">{{error}}</h2>
+                                <div class="form-group">
+                                   
+                                    <input placeholder=" Name" name="name" type="text" required="">
+                                    <input placeholder="LICENSE NO." name="licens" type="text" required="">
+                                    <input placeholder="SPECAILISED IN" name="spec" type="text" required="">
+                                    <input placeholder="EMAIL" type="text" name="email" required="">
+                                     <input placeholder="PASSWORD" type="password" name="pass" required="">
+                                     <input placeholder="working time" type="text" name="time" required="">
+                                    <button class="book-appo btn mt-3">CONFIRM </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+   
+   </body>
+   </html>   <!-- //Meta tag Keywords -->
+    
